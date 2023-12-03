@@ -1,0 +1,12 @@
+.imgProduct {
+  overflow: hidden;
+}
+.imgProduct img:hover {
+  transition: all ease 0.3s;
+  opacity: 0.8;
+  transform: scale(1.1, 1.1);
+}
+.badgeNew {
+  background: #f0ad4e !important ;
+  color: white !important;
+}

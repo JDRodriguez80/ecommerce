@@ -1,0 +1,51 @@
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.main-footer {
+  border-top: 0 !important;
+}
+
+.text-facebook {
+  color: #3b5998;
+}
+.text-instagram {
+  color: #e4405f;
+}
+.text-twitter {
+  color: #1da1f2;
+}
+.text-youtube {
+  color: #c4302b;
+}
+.text-linkedin {
+  color: #0077b5;
+}
+.text-whatsapp {
+  color: #25d366;
+}
+.text-telegram {
+  color: #0088cc;
+}
+
+[class*="sidebar-dark-"] .sidebar a {
+  color: #c2c7d0 !important;
+}
+[class*="sidebar-dark"] .brand-link,
+[class*="sidebar-dark"] .brand-link .pushmenu {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
