@@ -5,3 +5,6 @@ if (!isset($_SESSION["admin"])) {
 } else {
     include "dash/dashboard.php";
 }
+
+?>
+<script src="<?php echo $path ?>views/assets/js/forms/forms.js"></script>

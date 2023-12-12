@@ -46,13 +46,13 @@ function fncSweetAlert(type, text, url) {
       if (url == "") {
         Swal.fire({
           icon: "success",
-          title: "Correct",
+          title: "Correcto",
           text: text,
         });
       } else {
         Swal.fire({
           icon: "success",
-          title: "Correct",
+          title: "Correcto",
           text: text,
         }).then((result) => {
           if (result.value) {
@@ -63,7 +63,7 @@ function fncSweetAlert(type, text, url) {
       break;
     case "loading":
       Swal.fire({
-        title: "Loading",
+        title: "Cargando",
         icon: "info",
         text: text,
         allowOutsideClick: false,
