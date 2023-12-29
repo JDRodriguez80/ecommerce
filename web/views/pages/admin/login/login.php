@@ -89,10 +89,10 @@
                             <button type="submit" class="btn btn-default templateColor btn-block py-2">Solicitar</button>
                         </div>
                     </div>
-                    <?php 
-                        require_once "controllers/admins.controller.php";
-                        $reset =new AdminsController();
-                        $reset->resetPassword();
+                    <?php
+                    require_once "controllers/admins.controller.php";
+                    $reset = new AdminsController();
+                    $reset->resetPassword();
 
                     ?>
                 </form>
