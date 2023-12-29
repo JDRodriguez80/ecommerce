@@ -32,7 +32,18 @@ $template = CurlController::request($url, $method, $fields);
 if ($template->status == 200) {
   $template = $template->results[0];
 } else {
-  //todo  redirect to 500
+  echo '<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <link rel="stylesheet" href="' . $path . 'views/assets/css/plugins/adminlte/adminlte.min.css">
+  </head>
+  <body class="hold-transition sidebar-collapse layout-top-nav">
+  <div class="wrapper">';
+  include "pages/500/500.php";
+  echo '</div>
+      </body>
+      </html>';
+  return;
 }
 
 /**----------------------
@@ -78,6 +89,11 @@ echo '</pre>'*/
 
   <!-- Latest compiled and minified CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo $path ?>views/assets/css/plugins/adminlte/adminlte.min.css">
@@ -134,6 +150,19 @@ echo '</pre>'*/
   <script src="<?php echo $path ?>views/assets/js/plugins/toastr/toastr.min.js"></script>
   <!-- Material Preloader --->
   <script src="<?php echo $path ?>views/assets/js/plugins/material-preloader/material-preloader.js"></script>
+  <!-- DataTables  & Plugins -->
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/jszip/jszip.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/pdfmake/pdfmake.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/pdfmake/vfs_fonts.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+  <script src="<?php echo $path ?>views/assets/js/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
   <!-- alerts -->
   <script src="<?php echo $path ?>views/assets/js/alerts/alerts.js"></script>
   <!-- notie alert --->
@@ -145,6 +174,7 @@ echo '</pre>'*/
 </head>
 
 <body class="hold-transition sidebar-collapse layout-top-nav">
+  <input type="hidden" id="urlPath" value="<?php echo $path ?>">
   <div class="wrapper">
     <?php
     include "modules/top.php";
@@ -159,6 +189,8 @@ echo '</pre>'*/
         $routesArray[0] == "logout"
       ) {
         include "pages/" . $routesArray[0] . "/" . $routesArray[0] . ".php";
+      } else {
+        include "pages/404/404.php";
       }
     } else {
       include "pages/home/home.php";

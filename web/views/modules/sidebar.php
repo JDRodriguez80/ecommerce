@@ -22,7 +22,8 @@
         <!-- Add icons to the links using the .nav-icon class
         with font-awesome or any other icon font library -->
         <li class="nav-item">
-          <a href="/admin/administradores/" class="nav-link">
+          <a href="/admin/administradores/" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "administradores") : ?>
+            active<?php endif ?>">
             <i class="nav-icon fas fa-user-cog"></i>
             <p>
               Administradores
@@ -39,13 +40,15 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/admin/plantillas" class="nav-link">
+              <a href="/admin/plantillas" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "plantillas") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Plantillas</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="/admin/integraciones" class="nav-link">
+              <a href="/admin/integraciones" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "integraciones") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Integraciónes</p>
               </a>
@@ -62,13 +65,15 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/admin/slides" class="nav-link">
+              <a href="/admin/slides" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "slides") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Slides</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="/admin/banners" class="nav-link">
+              <a href="/admin/banners" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "banners") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Banners</p>
               </a>
@@ -81,41 +86,84 @@
             <p>
               Productos
               <i class="right fas fa-angle-left"></i>
+              <span class="right badge badge-primary mr-1">5</span>
+
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/admin/categorias" class="nav-link">
+              <a href="/admin/categorias" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "categorias") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Categorias</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="/admin/subcategorias" class="nav-link">
+              <a href="/admin/subcategorias" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "subcategorias") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Subcategorias</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="/admin/inventario" class="nav-link">
+              <a href="/admin/inventario" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "inventario") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Inventario</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="/admin/mensajes" class="nav-link">
+              <a href="/admin/mensajes" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "mensajes") : ?>
+            active<?php endif ?>">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Mensajes</p>
+                <span class="right badge badge-primary">5</span>
               </a>
             </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a href="../widgets.html" class="nav-link">
-            <i class="nav-icon fas fa-th"></i>
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-funnel-dollar"></i>
             <p>
-              Widgets
-              <span class="right badge badge-danger">New</span>
+              Ventas
+              <i class="right fas fa-angle-left"></i>
+              <span class="right badge badge-info mr-1">5</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="/admin/pedidos" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "pedidos") : ?>
+            active<?php endif ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Pedidos</p>
+                <span class="right badge badge-success">2</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/admin/disputas" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "disputas") : ?>
+            active<?php endif ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Disputas</p>
+                <span class="right badge badge-danger">3</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/admin/informes" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "informes") : ?>
+            active<?php endif ?>">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Informes</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="/admin/clientes" class="nav-link <?php if (!empty($routesArray[1]) && $routesArray[1] == "clientes") : ?>
+            active<?php endif ?>">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Clientes
+              <!-- <span class="right badge badge-danger">New</span>   --->
             </p>
           </a>
         </li>
@@ -123,7 +171,7 @@
           <a href="/logout" class="nav-link">
             <i class="nav-icon fas fa-sign-out-alt"></i>
             <p>
-              LogOut
+              Salir
             </p>
           </a>
         </li>

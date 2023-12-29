@@ -14,8 +14,16 @@ if (!isset($_SESSION["admin"])) {
             || $routesArray[1] == "subcategorias"
             || $routesArray[1] == "inventario"
             || $routesArray[1] == "mensajes"
+            || $routesArray[1] == "pedidos"
+            || $routesArray[1] == "disputas"
+            || $routesArray[1] == "informes"
+            || $routesArray[1] == "clientes"
         ) {
             include $routesArray[1] . "/" . $routesArray[1] . ".php";
+        }else{
+            echo '<script>
+                window.location="'.$path.'404";
+            </script>';
         }
     } else {
         include "dash/dashboard.php";
@@ -24,3 +32,4 @@ if (!isset($_SESSION["admin"])) {
 
 ?>
 <script src="<?php echo $path ?>views/assets/js/forms/forms.js"></script>
+<script src="<?php echo $path ?>views/assets/js/tables/tables.js"></script>
