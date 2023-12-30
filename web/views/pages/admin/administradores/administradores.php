@@ -19,7 +19,18 @@
 
     <!-- Main content -->
     <?php
+    if (!empty($routesArray[2])) {
+        if ($routesArray[2] == "gestion") {
+            include "modules/" . $routesArray[2] . ".php";
+        } else {
+            echo '<script>
+                window.location="' . $path . '404";
+                </script>';
+        }
+    } else {
         include 'modules/listado.php';
+    }
+
     ?>
     <!-- /.content -->
 </div>

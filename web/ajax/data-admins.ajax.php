@@ -55,9 +55,9 @@ class DatatableController
 
             $select = "id_admin,rol_admin,name_admin,email_admin,date_updated_admin";
 
-            /*=============================================
-           	Búsqueda de datos
-            =============================================*/
+        /*=============================================
+        Búsqueda de datos
+        =============================================*/
 
             if (!empty($_POST['search']['value'])) {
 
@@ -91,6 +91,7 @@ class DatatableController
                 }
             } else {
 
+            
                 /*=============================================
 	            Seleccionar datos
 	            =============================================*/
